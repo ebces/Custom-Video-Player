@@ -1,4 +1,4 @@
-document.addEventListener('load', () => {
+document.addEventListener('DOMContentLoaded', () => {
   const playButton = document.querySelector('.player__play-button');
   const video = document.querySelector('.player__screen');
   const volume = document.querySelector('.player__volume');
