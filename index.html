@@ -5,11 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Custom Video Player</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href = "data:,">
 </head>
 <body>
-    <video id="video">
-        <source src="assets/video/video.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
-    </video>
+    <main class="player">
+        <video class="player__screen">
+            <source src="assets/video/video.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+        </video>
+        <div class="player__control">
+            <input type="range" class="player__progress-bar" value="0">
+            <div class="player__play-button"></div>
+            <input type="range" min="1" max="10" value="5" class="player__volume">
+            <input type="range" min="1" max="10" value="5" class="player__speed">
+            <div class="player__rewind">&laquo;10s</div>
+            <div class="player__forward">25s&raquo;</div>
+        </div>
+    </main>
     <script src="script.js"></script>
 </body>
 </html>
