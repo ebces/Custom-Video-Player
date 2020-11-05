@@ -3,8 +3,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const video = document.querySelector('.player__screen');
   const volume = document.querySelector('.player__volume');
   const speed = document.querySelector('.player__speed');
-  const rew = document.querySelector('.player__rewind');
-  const ff = document.querySelector('.player__forward');
+  const rewind = document.querySelector('.player__rewind');
+  const fastForward = document.querySelector('.player__forward');
   const progressBar = document.querySelector('.player__progress-bar');
 
   const switchvideo = () => {
@@ -42,11 +42,11 @@ document.addEventListener('DOMContentLoaded', () => {
     video.currentTime = progressBar.value;
   });
 
-  ff.addEventListener('click', () => {
+  fastForward.addEventListener('click', () => {
     video.currentTime += 25;
   });
 
-  rew.addEventListener('click', () => {
+  rewind.addEventListener('click', () => {
     video.currentTime -= 10;
   });
 
