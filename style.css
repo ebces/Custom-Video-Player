@@ -1,0 +1,121 @@
+body {
+    min-width: 320px;
+    background: linear-gradient(135deg, #701779, #b33abe 50%, #9a01ff);
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.player {
+    height: 56vw;
+    max-height: 358px;
+    overflow: hidden;
+}
+
+.player__screen {
+    max-width: 100%;
+}
+
+.player__control {
+    transition: .5s;
+    transform: translateY(-10px);
+    color: #ffffff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background: #00000080;
+    padding-bottom: 15px;
+}
+
+.player__progress-bar {
+    transform: translateY(-2px);
+    width: 100%;
+    margin-bottom: 5px;
+    appearance: none;
+    outline: none;
+    cursor: w-resize;
+}
+
+.player__play-button {
+    cursor: pointer;
+    border: 10px solid rgba(0, 0, 0, 0);
+    border-left: #ffffff 10px solid;
+    margin-left: 0;
+}
+
+.player__play-button--pause {
+    width: 10px;
+    border: none;
+    margin-left: 10px;
+}
+
+.player__play-button--pause::after {
+    content: '';
+    position: absolute;
+    left: 18px;
+    height: 15px;
+    border: #ffffff 2px solid;
+    background-color: #ffffff;
+}
+
+.player__play-button--pause::before {
+    content: '';
+    position: absolute;
+    left: 25px;
+    height: 15px;
+    border: #ffffff 2px solid;
+    background-color: #ffffff;
+}
+
+.player__volume,
+.player__speed {
+    margin-top: 5px;
+    appearance: none;
+    outline: none;
+    height: 10px;
+    width: 30%;
+}
+
+.player:hover .player__control {
+    transform: translateY(-50px);
+}
+
+.player__volume::-webkit-slider-runnable-track,
+.player__speed::-webkit-slider-runnable-track {
+    height: 10px;
+    background-color: rgb(211, 211, 216);
+}
+
+.player__volume::-webkit-slider-thumb,
+.player__speed::-webkit-slider-thumb {
+    background: #f7df0e;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 15px;
+    height: 15px;
+    appearance: none;
+    margin-top: -2px;
+}
+
+.player__progress-bar::-webkit-slider-runnable-track {
+    height: 10px;
+    background-color: rgb(211, 211, 216);
+    overflow: hidden;
+}
+
+.player__progress-bar::-webkit-slider-thumb {
+    background-color: #f7df0e;
+    border-radius: 50%;
+    width: 1px;
+    height: 15px;
+    appearance: none;
+    box-shadow: -1000px 0 0 1000px #f7df0e;
+}
+
+.player__rewind,
+.player__forward {
+    cursor: pointer;
+}
